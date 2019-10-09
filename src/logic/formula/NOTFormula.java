@@ -11,7 +11,7 @@ public class NOTFormula extends Formula
 		this.formula = formula;
 	}
 	
-	public Formula getFormula() {
+	public Formula getArgumentFormula() {
 		return formula;
 	}
 
@@ -19,7 +19,7 @@ public class NOTFormula extends Formula
 	public boolean equals(Object arg0) 
 	{
 		if(arg0 instanceof NOTFormula)
-			return ((NOTFormula)arg0).getFormula().equals(formula);
+			return ((NOTFormula)arg0).getArgumentFormula().equals(formula);
 		return false;
 	}
 

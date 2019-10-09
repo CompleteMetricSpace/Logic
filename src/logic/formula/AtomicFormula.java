@@ -32,6 +32,21 @@ public class AtomicFormula extends Formula {
 		return false;
 	}
 	
+	public boolean isBasic()
+	{
+		return this.equals(TRUE) || this.equals(FALSE);
+	}
+	
+	public boolean isTRUE()
+	{
+		return this.equals(TRUE);
+	}
+	
+	public boolean isFALSE()
+	{
+		return this.equals(FALSE);
+	}
+	
 	@Override
 	public int hashCode()
 	{

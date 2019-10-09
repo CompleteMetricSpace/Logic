@@ -2,13 +2,19 @@ package logic.formula;
 
 public class Literal 
 {
-	AtomicFormula formula;
-	boolean positive;
+	private AtomicFormula formula;
+	private boolean positive;
 	
 	public Literal(AtomicFormula fomula, boolean positive)
 	{
 		this.formula = fomula;
 		this.positive = positive;
+	}
+	
+	public Literal(AtomicFormula fomula)
+	{
+		this.formula = fomula;
+		this.positive = true;
 	}
 
 	public AtomicFormula getFormula() {
@@ -24,7 +30,7 @@ public class Literal
 		return new Literal(formula, !positive);
 	}
 	
-	public Formula toFormula()
+	public Formula asFormula()
 	{
 		if(isPositive())
 			return formula;

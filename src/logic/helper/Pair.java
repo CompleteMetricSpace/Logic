@@ -42,6 +42,10 @@ public class Pair<U, V>
     @Override 
     public int hashCode()
     {
+    	if(u == null)
+    		return v.hashCode();
+    	if(v == null)
+    		return u.hashCode();
     	return u.hashCode()+31*v.hashCode();
     }
     

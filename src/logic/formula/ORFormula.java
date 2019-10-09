@@ -28,6 +28,10 @@ public class ORFormula extends Formula
 		return new ArrayList<>(formulaList);
 	}
 	
+	public List<Formula> getOrigList() {
+		return formulaList;
+	}
+	
 	public Formula[] getFormulaArray() {
 		return formulaList.toArray(new Formula[formulaList.size()]);
 	}
